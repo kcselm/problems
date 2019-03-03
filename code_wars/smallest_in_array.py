@@ -9,5 +9,4 @@ def smallest(arr):
             min = i
     return min
 
-
 print(smallest(arr))
