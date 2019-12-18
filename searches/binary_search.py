@@ -2,10 +2,7 @@
 array = [0, 1, 21, 33, 45, 61, 71, 72, 73, 355]
 target = 355
 
-def binary_search(array, target):
-    return binary_search_helper(array, target, 0, len(array) - 1)
-
-def binary_search_helper(array, target, left, right):
+def binary_search(array, target, left, right):
     while left <= right:
         middle = (left + right) // 2 
         potentialMatch = array[middle]
@@ -19,5 +16,4 @@ def binary_search_helper(array, target, left, right):
             # return binary_search_helper(array, target, middle + 1, right)
     return -1
 
-
-print(binary_search(array, target))
+print(binary_search(array, target, 0, len(array)-1))
